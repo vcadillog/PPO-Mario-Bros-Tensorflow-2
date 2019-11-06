@@ -1,6 +1,7 @@
 # PPO-Mario-Bros-Tensorflow-2
 A modular implementation for Proximal Policy Optimization in Tensorflow 2 using Eagerly Execution for the Super Mario Bros enviroment.
 
+![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/SI_3DSVC_SuperMarioBros_image1600w.jpg)
 ## Requeirements:
 - Tensorflow 2
 - OpenCV
@@ -12,7 +13,7 @@ Clone the repository,
 
 For training, run:
 ```
-python -c 'from Main import train; test(True)'
+python -c 'from Main import train; train(True)'
 ```
 The argument of test enable the load of the trained model.
 
