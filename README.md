@@ -62,9 +62,9 @@ Testing in not observed enviroments:
 ### About the files of the repository:
 
 * The Main.py file contains the train and test functions for the model.
-    1. The train function saves the weights of the model every 1000 timesteps, also creates summary files to visualize the change of the average total reward, the average of the x position and the max value of x position.
+    1. The train function saves the weights of the model every 1000 timesteps, also creates summary files to visualize the change of the average total reward, the average of the x position and the max value of x position. The load of weights is True by default.
     
-    2. The test function loads the weights of the model and test in the selected levels with deterministic actions, the train do stochastic actions to avoid reaching a local optimal; and creates in MP4 videos of how the agent did as many of defined numbers of test was selected.
+    2. The test function loads the weights of the model and test in the selected levels with deterministic actions, the train do stochastic actions to encourage to the agent to explore and avoid getting stucked in a local optimal; and creates in MP4 videos of how the agent did as many of defined numbers of test was selected.
 
 * The Common_constants.py file contains all the parameters needed for tune the algorithm, it transfer the parameters across the other files, also calls the Enviroment.py file to create the enviroment.
 
@@ -122,4 +122,4 @@ Testing in not observed enviroments:
   https://github.com/Kautenja/gym-super-mario-bros
  
 ### What to do now?
-* Implement meta learning and train in multiple enviroments for a more generalized actor.
+* Implement joint PPO and train in multiple enviroments for a more generalized actor.
