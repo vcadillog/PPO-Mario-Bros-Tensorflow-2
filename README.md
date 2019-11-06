@@ -64,9 +64,15 @@ Testing in not observed enviroments:
   https://github.com/coreystaten/deeprl-ppo
   
 * [4] Some of parameters of the convolutional neural network of "jakegrigsby".
+
   https://github.com/jakegrigsby/supersonic/tree/master/supersonic
+
+* [5] OpenAI Baselines of Atari and Retro wrappers.
+
+  https://github.com/openai/baselines/tree/master/baselines
   
-* [5] The implementation of Super Mario Brothers by "Kautenja".
+* [6] The implementation of Super Mario Brothers by "Kautenja".
+
   https://github.com/Kautenja/gym-super-mario-bros
  
 ### To do:
