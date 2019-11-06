@@ -49,7 +49,7 @@ Eight actors were trained in the first level of Mario, and this is how it learne
 
 ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/mario.gif)
 
-A plot how the average reward evolved vs the time steps, the model trained in four steps due connection, the reward isn't the same as the raw output of Kautenja's implementation, it was previously scaled for this model, all the data pre processing is in the Datapreprocessing.py file.
+A plot how the average reward evolved vs the time steps, the model was trained in four steps due ethernet connection, the reward isn't the same as the raw output of Kautenja's implementation, it was previously scaled for this model, all the data pre processing is in the Datapreprocessing.py file.
 
 ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/log1.PNG)![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/log2.PNG)![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/log3.PNG)![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/log4.PNG)
 
