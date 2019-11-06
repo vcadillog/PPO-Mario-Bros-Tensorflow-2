@@ -5,11 +5,12 @@ A modular implementation for Proximal Policy Optimization in Tensorflow 2 using 
 ## Requeirements:
 - Tensorflow 2
 - OpenCV
-- OpenIA gym
+- OpenAI gym
 - Super Mario Bros NES, developed by Kautenja
 
 ## Installing:
 Clone the repository,
+
 Change the path to the cloned repository
 
 ```
@@ -28,8 +29,9 @@ For testing the model:
 python -c 'from Main import test; test(10,0)'
 ```
 
-Where the first argument of test is the number of episodes to test the model, and the second is the number of the enviroment to test,
-for the code the enviroments of test are the next ones:
+Where the first argument of test is the number of episodes to test the model, and the second is the number of the enviroment to test.
+
+For the code the enviroments for test are the next ones:
 ```
 0 : SuperMarioBros-1-1-v0
 The first level of the first world
