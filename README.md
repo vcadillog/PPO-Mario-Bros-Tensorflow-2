@@ -62,6 +62,9 @@ Testing in not observed enviroments:
 ### About the files of the repository:
 
 * The Main.py file contains the train and test functions for the model.
+    1. The train function saves the weights of the model every 1000 timesteps, also creates summary files to visualize the change of the average total reward, the average of the x position and the max value of x position.
+    
+    2. The test function loads the weights of the model and test in the selected levels with deterministic actions, the train do stochastic actions to avoid reaching a local optimal; and creates in MP4 videos of how the agent did as many of defined numbers of test was selected.
 
 * The Common_constants.py file contains all the parameters needed for tune the algorithm, it transfer the parameters across the other files, also calls the Enviroment.py file to create the enviroment.
 
@@ -77,7 +80,7 @@ Testing in not observed enviroments:
     
     4. Resize the image and grayscaling for a faster performance of the neural network.
     
-    5. Stochasting skipping of frames, based on [2], to add a randomness to the enviroment.
+    5. Stochastic skipping of frames, based on [2], to add a randomness to the enviroment.
     
     6. Stacking of frames to create a sense of movement, based on the Atari DeepMind's implementation.
     
