@@ -35,8 +35,13 @@ The third level of the first world
 3 : SuperMarioBros-2-2-v0
 The second level of the second world
 ```
-## The agent was trained in the first level of Mario, and this is how it learned to finish it.
+The agent was trained in the first level of Mario, and this is how it learned to finish it.
+
 ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/mario.gif)
+
+Testing in not observed enviroments:
+
+![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_2.gif) ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_3.gif) ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_4.gif)
 
 ### This code was inspired from:
 * [1] Proximal Policy Optimization Algorithms. 
@@ -56,3 +61,6 @@ The second level of the second world
   
 * [5] The implementation of Super Mario Brothers by "Kautenja".
   https://github.com/Kautenja/gym-super-mario-bros
+ 
+### To do:
+* Implement meta learning and train in multiple enviroments for a more generalized actor.
