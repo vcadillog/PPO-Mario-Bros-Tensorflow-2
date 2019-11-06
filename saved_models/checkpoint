@@ -1,0 +1,2 @@
+model_checkpoint_path: "model_policy_net"
+all_model_checkpoint_paths: "model_policy_net"
