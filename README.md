@@ -50,10 +50,10 @@ To change the enviroments, modify the Enviroments.py file.
 ```
 There's an easy example of how to use this repo, in the EXAMPLE_OF_USE.ipynb notebook for Google Colab, just download it and upload to colab, there's not need to have python installed in your machine, the generated videos are in the branch of gloned repo.
 Or open this link:
-
-https://colab.research.google.com/drive/16xgJeXjteuw3WNVfHtp_t_VsXLQyumGa?authuser=1
-
 ```
+
+https://colab.research.google.com/drive/16xgJeXjteuw3WNVfHtp_t_VsXLQyumGa
+
 
 ### RESULTS
 
