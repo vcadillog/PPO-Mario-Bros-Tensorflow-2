@@ -12,11 +12,16 @@ A modular implementation for Proximal Policy Optimization in Tensorflow 2 using 
 Clone the repository,
 Change the path to the cloned repository
 
+```
+import os
+os.chdir('./PPO-Mario-Bros-Tensorflow-2')
+```
+
 For training, run:
 ```
 python -c 'from Main import train; train(True)'
 ```
-The argument of test enable the load of the trained model.
+The argument of training enables the load of weights of the trained model.
 
 For testing the model:
 ```
@@ -35,7 +40,9 @@ The third level of the first world
 3 : SuperMarioBros-2-2-v0
 The second level of the second world
 ```
-The agent was trained in the first level of Mario, and this is how it learned to finish it.
+
+To change the enviroments, modify the Enviroments.py file.
+Eight actors were trained in the first level of Mario, and this is how it learned to finish it.
 
 ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/mario.gif)
 
