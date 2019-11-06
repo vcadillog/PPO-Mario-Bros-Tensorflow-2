@@ -10,6 +10,7 @@ A modular implementation for Proximal Policy Optimization in Tensorflow 2 using 
 
 ## Installing:
 Clone the repository,
+Change the path to the cloned repository
 
 For training, run:
 ```
