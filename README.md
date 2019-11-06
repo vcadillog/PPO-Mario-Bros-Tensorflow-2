@@ -31,7 +31,7 @@ python -c 'from Main import test; test(10,0)'
 
 Where the first argument of test is the number of episodes to test the model, and the second is the number of the enviroment to test.
 
-For the code the enviroments for test are the next ones:
+For the code the enviroments available are the next ones:
 ```
 0 : SuperMarioBros-1-1-v0
 The first level of the first world
@@ -58,6 +58,39 @@ In the logs directory you can find two more plots, for average X_position and Ma
 Testing in not observed enviroments:
 
 ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_2.gif) ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_3.gif) ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_4.gif)
+
+### About the files of the repository:
+
+* The Main.py file contains the train and test functions for the model.
+
+* The Common_constants.py file contains all the parameters needed for tune the algorithm, it transfer the parameters across the other files, also calls the Enviroment.py file to create the enviroment.
+
+* The Enviroment.py file defines the enviroment of four diferent levels of Super Mario Bros and calls the preprocessing functions.
+
+* The Datapreprocessing.py file creates several Classes to do:  
+    
+    1. Reset the enviroment after dying, this gives an additional negative reward of 50.
+    
+    2. Reset the enviroment after getting the flag or completing the level, this adds a positive reward of 100.
+    
+    3. Scalation of the reward, by a 0.05 factor.
+    
+    4. Resize the image and grayscaling for a faster performance of the neural network.
+    
+    5. Stochasting skipping of frames, based on [2], to add a randomness to the enviroment.
+    
+    6. Stacking of frames to create a sense of movement, based on the Atari DeepMind's implementation.
+    
+    7. Scaling the pixels of the image with 255 to get a range of [0-1] values. 
+    
+* The Auxiliars.py file contains some common function to use in the program, like saving, loading models.
+
+* The MultiEnv.py file create a callable with multiple Proccess to create several actors, and also calcules the advantage estimator defined in [1].
+
+* The PPO.py file contains tf functions to calculate the total loss defined in [1] and run gradients in eagerly execution of tensorflow 2.
+
+* The NeuralNets.py file contains two classes of models, for the actor and the critic.
+  
 
 ### This code was inspired from:
 
