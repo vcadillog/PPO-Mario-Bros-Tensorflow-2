@@ -58,6 +58,7 @@ Testing in not observed enviroments:
 ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_2.gif) ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_3.gif) ![alt text](https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2/blob/master/images/test_4.gif)
 
 ### This code was inspired from:
+
 * [1] Proximal Policy Optimization Algorithms. 
 
   https://arxiv.org/pdf/1707.06347.pdf
@@ -66,7 +67,7 @@ Testing in not observed enviroments:
 
   https://arxiv.org/pdf/1804.03720.pdf
  
-* [3] The implementation in tensorflow 1 of "coreystaten".
+* [3] The implementation of Ping Pong - Atari in tensorflow 1 of "coreystaten".
 
   https://github.com/coreystaten/deeprl-ppo
   
@@ -74,7 +75,7 @@ Testing in not observed enviroments:
 
   https://github.com/jakegrigsby/supersonic/tree/master/supersonic
 
-* [5] OpenAI Baselines of Atari and Retro wrappers.
+* [5] OpenAI Baselines of Atari and Retro wrappers for pre processing.
 
   https://github.com/openai/baselines/tree/master/baselines
   
@@ -82,5 +83,5 @@ Testing in not observed enviroments:
 
   https://github.com/Kautenja/gym-super-mario-bros
  
-### To do:
+### What to do now?
 * Implement meta learning and train in multiple enviroments for a more generalized actor.
