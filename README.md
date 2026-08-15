@@ -13,20 +13,15 @@ Clone the repository,
 
 Change the path to the cloned repository
 
-```
-import os
-os.chdir('./PPO-Mario-Bros-Tensorflow-2')
-```
-
 For training, run:
 ```
-python -c 'from Main import train; train(True)'
+python main.py --train
 ```
-The argument of training enables the load of weights of the trained model.
 
 For testing the model:
+
 ```
-python -c 'from Main import test; test(10,0)'
+python main.py --test --episodes 3 --env 0
 ```
 
 Where the first argument of test is the number of episodes to test the model, and the second is the number of the enviroment to test.

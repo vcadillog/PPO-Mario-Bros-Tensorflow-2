@@ -1,3 +1,6 @@
+#docker build --build-arg CACHEBUST=$(date +%s) -t vcadillog/ppo-mario:latest .
+#docker run -it --name ppo vcadillog/ppo-mario:latest
+
 FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -39,6 +42,7 @@ RUN python -u -m pip install --use-deprecated=legacy-resolver nes-py==8.1.1
 RUN python -u -m pip install --use-deprecated=legacy-resolver gym-super-mario-bros==7.3.0
 
 WORKDIR /workspace
+ARG CACHEBUST=1
 RUN git clone https://github.com/vcadillog/PPO-Mario-Bros-Tensorflow-2.git
 
 WORKDIR /workspace/PPO-Mario-Bros-Tensorflow-2
