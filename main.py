@@ -11,6 +11,7 @@ import Enviroments as Env
 import Common_constants as CC
 import MultiEnv as ME
 import Auxiliars as AUX
+import argparse
 
 tf.keras.backend.set_floatx('float32')
 
@@ -26,6 +27,9 @@ base_learning_rate = CC.base_learning_rate
 log_dir = CC.log_dir
 SMALL_NUM = CC.SMALL_NUM
 load_model = CC.load_model
+horizon = CC.horizon
+optim_epochs = CC.optim_epochs
+batch_size = CC.batch_size
 
 def train(load = True):
     
@@ -191,3 +195,55 @@ def test(episodes,env_test):
 
 
     print('Average reward: %0.2f of %s episodes' %(np.mean(scores),episodes))            
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Train or test the PPO agent."
+    )
+
+    mode = parser.add_mutually_exclusive_group(required=True)
+
+    mode.add_argument(
+        "--train",
+        action="store_true",
+        help="Train the PPO agent."
+    )
+
+    mode.add_argument(
+        "--test",
+        action="store_true",
+        help="Test the trained PPO agent."
+    )
+
+    parser.add_argument(
+        "--episodes",
+        type=int,
+        default=10,
+        help="Number of episodes for testing. Default: 10"
+    )
+
+    parser.add_argument(
+        "--env",
+        type=int,
+        default=0,
+        choices=range(4),
+        help="Environment to use for testing (0-3). Default: 0"
+    )
+
+    parser.add_argument(
+        "--no-load",
+        action="store_true",
+        help="Do not load an existing model when training."
+    )
+
+    args = parser.parse_args()
+
+    if args.train:
+        train(load=not args.no_load)
+
+    elif args.test:
+        test(args.episodes, args.env)
+
+
+if __name__ == "__main__":
+    main()
