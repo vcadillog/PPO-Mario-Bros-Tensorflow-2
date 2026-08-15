@@ -1,6 +1,7 @@
 import Common_constants
 import tensorflow as tf
 import os
+import numpy as np
 
 max_steps = Common_constants.max_steps
 
